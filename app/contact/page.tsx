@@ -30,7 +30,7 @@ const Contact = () => {
         <div className="lg:w-1/3 md:w-1/2 px-4 hover:shadow-lg transition-all duration-300 shadow-black shadow-xl bg-white dark:bg-transparent flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
           <h2 className="text-gray-900 dark:text-white text-lg mb-1 font-medium title-font">Get In Touch</h2>
           <p className="leading-relaxed mb-5 text-gray-600">
-            Have questions, feedback, or want to collaborate? Drop a message below!
+            Have questions, feedback, or want to collaborate Drop a message below!
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
