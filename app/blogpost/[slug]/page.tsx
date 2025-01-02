@@ -11,7 +11,7 @@ import fs from "fs"
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { transformerCopyButton } from '@rehype-pretty/transformers'
 import Onthispage from '@/components/Onthispage';
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata} from 'next'
 import CommentSection from '@/components/CommentSection';
  
 type Props = {
