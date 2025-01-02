@@ -72,15 +72,14 @@ const htmlContent = (await processor.process(content)).toString()
 
 
   export async function generateMetadata(
-    { params, searchParams }: Props,
-    parent: ResolvingMetadata
+    { params }: Props,
   ): Promise<Metadata> {
     // read route params
   
 
     const filepath =`content/${(await params).slug}.md`
 const fileContent = fs.readFileSync(filepath, "utf-8")
-const {data, content} = matter(fileContent)
+const {data} = matter(fileContent)
 
     return {
       title: data.title,
