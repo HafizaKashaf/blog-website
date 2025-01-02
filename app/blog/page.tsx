@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
