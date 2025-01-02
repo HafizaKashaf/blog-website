@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import {fontFamily} from "tailwindcss/defaulttheme"
+import {fontFamily} from "tailwindcss/defaulTtheme"
 
 export default {
     darkMode: "class",
