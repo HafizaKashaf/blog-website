@@ -6,24 +6,21 @@ import matter from "gray-matter";
 import Link from "next/link";
 import { Metadata } from "next";
 
-interface Blog {
-  slug: string;
+interface BlogType {
+  slug: string; 
   title: string;
-  imageUrl: string;
-  description: string;
-}
+  description: string; 
+  imageUrl?: string;
 
-interface BlogListProps {
-  blogs: Blog[];
-}
+};
  const dirContent = fs.readdirSync("content", "utf-8");
  console.log(dirContent)
 
 
- const file: Blog[] = dirContent.map(file=>{
+ const blogs: BlogType[] = dirContent.map(file=>{ 
   const fileContent = fs.readFileSync(`content/${file}`, "utf-8");
   const { data } = matter(fileContent);
-  const value : Blog ={
+  const value: BlogType = {
     slug: data.slug ,
     title: data.title,
     imageUrl: data.imageUrl,
@@ -32,17 +29,16 @@ interface BlogListProps {
   
   return value
  })
- console.log(file)
+ console.log(blogs)
 
-const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
-  console.log(blogs)
+ const BlogList = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold text-center mb-6">Blogs</h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {file.map((blog:Blog) => (
+      {blogs.map((blog: BlogType, index: number) =>  (
           <div
-            key={blog.slug}
+            key={index}
             className=" shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
           >
             <img
