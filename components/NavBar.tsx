@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import {  buttonVariants } from "@/components/ui/button";
 import { ModeToggle } from './theme-toggle';
-import { Menu } from 'lucide-react';
+import { Menu} from 'lucide-react';
 import {
     Sheet,
     SheetContent,
