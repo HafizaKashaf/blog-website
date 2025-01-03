@@ -14,7 +14,7 @@ import {
   } from "@/components/ui/sheet"
   import LoadingBar from "react-top-loading-bar";
   import { usePathname } from 'next/navigation'
-  
+  import MobileNav from './MobileNav';  
 
 
 const NavBar = () => {
@@ -75,17 +75,17 @@ const NavBar = () => {
             </li>
             
         </ul>
-        <div className='flex gap-2 items-center'>
         <ModeToggle />
+        <div className='flex gap-2 items-center'>
+        
         <Sheet>
   <SheetTrigger><Menu  className='size-7 md:hidden'/></SheetTrigger>
   <SheetContent>
     <SheetHeader>
-      <SheetTitle>Are you absolutely sure?</SheetTitle>
+      <SheetTitle></SheetTitle>
       <SheetDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
       </SheetDescription>
+      <MobileNav />
     </SheetHeader>
   </SheetContent>
 </Sheet>
